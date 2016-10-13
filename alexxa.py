@@ -12,7 +12,7 @@ def add_entry(self):
 
     """add a journal entry"""
 	
-    print('Please Enter your journal entry.')
+    print('Please Enter your journal.')
 	
     data = sys.stdin.read().strip()
 
