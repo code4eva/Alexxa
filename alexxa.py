@@ -1,13 +1,5 @@
 #! usr/bin/env Python3
 
-
-class alexxa():
-  pass
-
-
-
-
-
 def add_entry(data):
 
     """add a journal entry"""
