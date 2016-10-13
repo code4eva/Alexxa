@@ -8,15 +8,30 @@ class alexxa():
 
 
 
-def add_entry(self):
+def add_entry(data):
 
     """add a journal entry"""
+    input =[]
 	
-    print('Please Enter your journal.')
+    #print('Please Enter your journal.')
 	
-    data = sys.stdin.read().strip()
+    #data = sys.stdin.read().strip()
 
     if data:
-        if input('Save entry? Y/N').lower() != 'n':
-            Entry.create(content=data)
-            print('Saved!')
+        
+     	if input('Save entry? Y/N').lower() != 'n':
+            
+    #Entry.create(content=data)
+        new_journal=input.append(data)
+    result = "journal succesfully saved"
+
+           # print('Saved!')
+    else:
+
+    	result = "No journal entry"
+
+    return result
+
+
+
+print(add_entry(""))
