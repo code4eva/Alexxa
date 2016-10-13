@@ -1,5 +1,6 @@
 #! usr/bin/env Python3
 
+# saves user data: title and content
 def add_entry(data):
 
     """add a journal entry"""
@@ -48,9 +49,11 @@ global username
 
 if __name__ == '__main__':
   print "Enter username to access journal:"
-  username = input()
+  username = raw_input()
 
+  # number of journals created by the user
   journal_count = get_user_journals(username)
+  # last created journal by the user
   last_journal = get_last_journal(username)
 
   # could be -1 or user's name
@@ -64,17 +67,17 @@ if __name__ == '__main__':
 
   while user_input != 3:
     print "Press 1 to 'create new journal', 2 to 'change username', or 3 to 'quit'."
-    user_input = input()
+    user_input = raw_input()
     system_response = handle_user_input(user_input)
 
     if system_response == 1:
       # get journal title
       print "Enter journal title:"
-      title = input()
+      title = raw_input()
 
       # get journal content
       print "Enter journal content:"
-      content = input()
+      content = raw_input()
 
       # response
       response = create_new_journal(username,title,content)
@@ -84,7 +87,7 @@ if __name__ == '__main__':
         print "Error encountered while creating journal."
     elif system_response == 0:
       print "Enter the username to change to:"
-      change_username = input()
+      change_username = raw_input()
 
       # change the global var to match new username request
       username = change_username
