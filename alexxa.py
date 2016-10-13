@@ -34,4 +34,19 @@ def add_entry(data):
 
 
 
-print(add_entry(""))
+#print(add_entry(""))
+
+def get_last_journal(username):
+	#dummy journal list
+	journal_list = ["yes", "no", "jinx"]
+	#user is active
+	if username == "Ray":
+
+		result = journal_list[-1]
+	#user doesnt exist
+	else:
+
+		result = "User does not exist"
+
+	return result
+
